@@ -84,6 +84,19 @@ To start running the container open up the Docker Desktop application. Go to "Co
 
 If changes are made to the schema you will need to update your image and thus your container.
 
-Open the Docker Desktop application and go to the "Images" tab.
+Open the Docker Desktop application and go to the "Containers / Apps" tab.
 
-Hover over the "robertmaessmoothstack/..." image and click on the 3 vertical dots. Then click "pull".
+If your container is running, first stop it and then delete it.
+
+![](readme_assets/delete-container.png)
+
+Now go to the "Images" tab and hover over the "robertmaessmoothstack/..." image and click on the 3 vertical dots. Then click "pull".
+
+![](readme_assets/pull.png)
+
+You will now see two images. Look under the "TAG" column. The one you want to KEEP is the one that says "latest".
+Delete the other image.
+
+![](readme_assets/delete-old.png)
+
+Now follow the same instructions from above for "Creating a Container from the Image"

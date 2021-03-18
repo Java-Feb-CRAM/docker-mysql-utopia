@@ -10,12 +10,12 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema default_schema
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `default_schema` ;
+DROP SCHEMA IF EXISTS `utopia` ;
 
 -- -----------------------------------------------------
 -- Schema default_schema
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `default_schema` ;
+CREATE SCHEMA IF NOT EXISTS `utopia` ;
 -- -----------------------------------------------------
 -- Schema utopia
 -- -----------------------------------------------------
@@ -25,7 +25,7 @@ DROP SCHEMA IF EXISTS `utopia` ;
 -- Schema utopia
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `utopia` DEFAULT CHARACTER SET utf8 ;
-USE `default_schema` ;
+USE `utopia` ;
 
 -- -----------------------------------------------------
 -- Table `utopia`.`user_role`
@@ -72,9 +72,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `default_schema`.`verification_token`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `default_schema`.`verification_token` ;
+DROP TABLE IF EXISTS `utopia`.`verification_token` ;
 
-CREATE TABLE IF NOT EXISTS `default_schema`.`verification_token` (
+CREATE TABLE IF NOT EXISTS `utopia`.`verification_token` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
   `token` VARCHAR(64) NULL,
@@ -93,9 +93,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `default_schema`.`password_reset_token`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `default_schema`.`password_reset_token` ;
+DROP TABLE IF EXISTS `utopia`.`password_reset_token` ;
 
-CREATE TABLE IF NOT EXISTS `default_schema`.`password_reset_token` (
+CREATE TABLE IF NOT EXISTS `utopia`.`password_reset_token` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
   `token` VARCHAR(64) NULL,
